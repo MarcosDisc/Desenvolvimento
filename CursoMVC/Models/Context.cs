@@ -12,14 +12,10 @@ namespace CursoMVC.Models
     {
         public DbSet<Categoria> Categorias { get; set; }
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {
-            optionsBuilder
-                .UseMySQL("server=127.0.0.1;port=3306;database=cursoMVC;user=root;password=Oxford@0202");
-                //.UseLoggerFactory(LoggerFactory.Create(b => b.AddConsole().AddFilter(level => level >= LogLevel.Information)))
-                //.EnableSensitiveDataLogging()
-                //.EnableDetailedErrors();
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-VCJLO2Q\\SQLEXPRESS;database=cursoMVC;Integrated Security=true");
+                
         }
 
     }
