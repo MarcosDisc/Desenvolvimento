@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace CursoMVC.Models
 {
-    public class Categoria
+    public class Produto
     {
-        
-        
         public int Id { get; set; }
-
+            
         [Display(Name = "Descrição")]
-        [Required(ErrorMessage ="O campos descrição é obrigatorio.")]
         public string Descricao { get; set; }
-
-        public List<Produto> Produtos { get; set; }
-
+        public int Quantidade { get; set; }
+        public int CatagoriaId { get; set; }
+        public Categoria Catagoria { get; set; }
     }
 }
