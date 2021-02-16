@@ -12,6 +12,7 @@ namespace CursoMVC.Models
             
         [Display(Name = "Descrição")]
         public string Descricao { get; set; }
+        [Range(1,100,ErrorMessage ="Valor fora da faixa.")]
         public int Quantidade { get; set; }
         public int CatagoriaId { get; set; }
         public Categoria Catagoria { get; set; }
